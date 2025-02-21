@@ -212,7 +212,11 @@ func main() {
 	http.HandleFunc("/publish", publishMessageHandler)
 	http.HandleFunc("/create-subscription", createSubscriptionHandler)
 
-	port := "3030"
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "3030"
+	}
+
 	fmt.Println("Server is started on: " + port)
 	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
