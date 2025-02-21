@@ -1,0 +1,12 @@
+.env
+/.idea
+.vscode
+bot
+.bot
+config.yaml
+yzml.config
+yaml.config
+video.mp4
+localhost.session.sql
+pg_socket/*
+!pg_socket/.gitkeep
